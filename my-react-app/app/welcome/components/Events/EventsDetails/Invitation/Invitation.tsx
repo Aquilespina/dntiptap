@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Input } from "@heroui/react";
-import RichTextEditor from "@/components/RichText/RichText";
+import RichTextEditor from "../../../RichText/RichText";
 import InvitationActions from "./partials/InvitationActions";
 import Dates from "@/components/Date/Dates";
 import VariablePanel from "./partials/VariablePanel";
