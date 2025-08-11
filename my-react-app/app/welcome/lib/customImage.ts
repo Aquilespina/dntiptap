@@ -2,7 +2,7 @@ import { Node, mergeAttributes } from "@tiptap/core";
 
 declare module "@tiptap/core" {
     interface Commands<ReturnType> {
-         : {
+        customImage: {
             setImage: (options: {
                 src: string;
                 alt?: string;
@@ -14,7 +14,7 @@ declare module "@tiptap/core" {
     }
 }
 
-export const   = Node.create({
+export const CustomImage = Node.create({
     name: "image",
     group: "block",
     inline: false,

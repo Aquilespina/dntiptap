@@ -1,6 +1,6 @@
 import { Node, mergeAttributes } from "@tiptap/core";
 
-export interface  NodeAttrs {
+export interface MentionNodeAttrs {
     id: string;
     label: string;
     type: "guest" | "event";
@@ -8,14 +8,14 @@ export interface  NodeAttrs {
 
 declare module "@tiptap/core" {
     interface Commands<ReturnType> {
-         : {
-            insert : (attrs:  NodeAttrs) => ReturnType;
+        mention: {
+            insertMention: (attrs: MentionNodeAttrs) => ReturnType;
         };
     }
 }
 
-export const   = Node.create({
-    name: " ",
+export const Mention = Node.create({
+    name: "mention",
     group: "inline",
     inline: true,
     atom: true,
@@ -30,7 +30,7 @@ export const   = Node.create({
     },
 
     parseHTML() {
-        return [{ tag: "span[data- ]" }];
+        return [{ tag: "span[data-mention]" }];
     },
 
     renderHTML({ node, HTMLAttributes }) {
@@ -44,7 +44,7 @@ export const   = Node.create({
         return [
             "span",
             mergeAttributes(HTMLAttributes, {
-                "data- ": "",
+                "data-mention": "",
                 class: `inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${classes}`,
             }),
             `${prefix}${node.attrs.label}`,
@@ -53,8 +53,8 @@ export const   = Node.create({
 
     addCommands() {
         return {
-            insert :
-                (attrs:  NodeAttrs) =>
+            insertMention:
+                (attrs: MentionNodeAttrs) =>
                 ({ chain }) => {
                     return chain()
                         .insertContent({
