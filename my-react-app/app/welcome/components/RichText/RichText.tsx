@@ -39,6 +39,7 @@ export default function RichTextEditor({
                 orderedList: { keepMarks: true, keepAttributes: false },
                 underline: false,
                 link: false,
+                immediatelyRender: false,
             }),
             Underline,
             CustomImage,

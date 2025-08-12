@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StatusBanner from "./StatusBanner";
 import { Variable } from "../Invitation";
-import { SecondaryButton } from "@/components/Button";
+import { SecondaryButton } from "../../../../../components/Button";
 
 type LocalStatus = "not_scheduled" | "scheduled" | "editing" | "sent";
 

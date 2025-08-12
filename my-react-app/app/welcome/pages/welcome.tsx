@@ -8,11 +8,11 @@ import Link from "@tiptap/extension-link";
 import Color from "@tiptap/extension-color";
 import ListItem from "@tiptap/extension-list-item";
 import { MenuBar } from "./MenuBar";
-// import ImageFloatMenu from "./partials/ImageFloatMenu";
-// import { CustomImage } from "@/lib/customImage";
+import ImageFloatMenu from "../partials/ImageFloatMenu";
+import { CustomImage } from "../lib/customImage";
 import { Variable } from "../components/Events/EventsDetails/Invitation/Invitation";
-// import { getMentionExtensions } from "./partials/Mentions";
-// import { Mention } from "@/lib/mention";
+import { getMentionExtensions } from "../partials/Mentions";
+import { Mention } from "../lib/mention";
 
 interface RichTextBlockProps {
   content: string;
@@ -39,6 +39,7 @@ export default function RichTextEditor({
         orderedList: { keepMarks: true, keepAttributes: false },
         underline: false,
         link: false,
+
       }),
       Underline,
       CustomImage,

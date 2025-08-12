@@ -29,12 +29,18 @@ importers:
       '@react-router/serve':
         specifier: ^7.8.0
         version: 7.8.0(react-router@7.8.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.9.2)
+      '@tiptap/core':
+        specifier: ^3.1.0
+        version: 3.1.0(@tiptap/pm@3.1.0)
       '@tiptap/extension-color':
         specifier: ^3.1.0
         version: 3.1.0(@tiptap/extension-text-style@3.1.0(@tiptap/core@3.1.0(@tiptap/pm@3.1.0)))
       '@tiptap/extension-link':
         specifier: ^3.1.0
         version: 3.1.0(@tiptap/core@3.1.0(@tiptap/pm@3.1.0))(@tiptap/pm@3.1.0)
+      '@tiptap/extension-list-item':
+        specifier: ^3.1.0
+        version: 3.1.0(@tiptap/extension-list@3.1.0(@tiptap/core@3.1.0(@tiptap/pm@3.1.0))(@tiptap/pm@3.1.0))
       '@tiptap/extension-text-align':
         specifier: ^3.1.0
         version: 3.1.0(@tiptap/core@3.1.0(@tiptap/pm@3.1.0))
@@ -65,6 +71,9 @@ importers:
       isbot:
         specifier: ^5.1.29
         version: 5.1.29
+      prosemirror-state:
+        specifier: ^1.4.3
+        version: 1.4.3
       react:
         specifier: ^19.1.1
         version: 19.1.1

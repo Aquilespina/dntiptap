@@ -1,11 +1,11 @@
-// import { Variable } from "@/welcome/components/Events/EventsDetails/Invitation/Invitation";
-import {   } from "app/welcome/lib/ ";
-import { create Extension } from "app/welcome/lib/ Extension";
+// import { Variable } from "@/components/Events/EventsDetails/Invitation/Invitation";
+import { Mention } from "../lib/mention";
+import { createMentionExtension } from "../lib/mentionExtensions";
 
-export function get  (guestVariables, eventVariables) {
+export function getMentionExtensions(guestVariables, eventVariables) {
     return [
-         , // tu nodo
-        create Extension("@", "guest", guestVariables, " Guest"),
-        create Extension("#", "event", eventVariables, " Event"),
+        Mention, // tu nodo
+        createMentionExtension("@", "guest", guestVariables, "mentionGuest"),
+        createMentionExtension("#", "event", eventVariables, "mentionEvent"),
     ];
 }
