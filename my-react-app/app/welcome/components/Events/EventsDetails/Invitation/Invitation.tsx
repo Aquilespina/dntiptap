@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Input } from "@heroui/react";
 import RichTextEditor from "../../../RichText/RichText";
 import InvitationActions from "./partials/InvitationActions";
-import Dates from "@/components/Date/Dates";
+import Dates from "../../../../components/Date/Dates";
 import VariablePanel from "./partials/VariablePanel";
-import { parseGuestVariables } from "@/components/helpers/parse-guest-variables";
+import { parseGuestVariables } from "../../../../components/helpers/parse-guest-variables";
 import dayjs from "dayjs";
 
 type Status = "not_scheduled" | "sent" | "scheduled";

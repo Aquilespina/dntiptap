@@ -1,5 +1,5 @@
-import { PrimaryButton, SecondaryButton } from "@/components/Button";
-import { Dispatch, SetStateAction } from "react";
+import { PrimaryButton, SecondaryButton } from "../../../../../components/Button";
+import type { Dispatch, SetStateAction } from "react";
 
 type LocalStatus = "not_scheduled" | "scheduled" | "editing" | "sent";
 

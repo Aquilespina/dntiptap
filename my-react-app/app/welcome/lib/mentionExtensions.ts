@@ -1,17 +1,17 @@
 import { Extension } from "@tiptap/core";
 import { PluginKey } from "prosemirror-state";
-import { SuggestionOptions, SuggestionProps } from "@tiptap/suggestion";
+import type { SuggestionOptions, SuggestionProps } from "@tiptap/suggestion";
 import suggestion from "@tiptap/suggestion";
-import {  NodeAttrs } from "./ ";
+// import {  NodeAttrs } from "./ ";
 
-export function create Extension(
+export function createExtension(
     char: "@" | "#",
     type: "guest" | "event",
     variables: { id: string; label: string }[],
-    key: string,
+    key: string
 ): Extension {
     return Extension.create({
-        name: ` Suggestion${type}`,
+        name: `Suggestion${type}`,
 
         addProseMirrorPlugins() {
             return [
@@ -87,7 +87,7 @@ export function create Extension(
                             .focus()
                             .deleteRange(range)
                             .insertContent({
-                                type: " ",
+                                type: type,
                                 attrs: props,
                             })
                             .run();
